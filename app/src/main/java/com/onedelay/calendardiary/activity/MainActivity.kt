@@ -18,10 +18,12 @@ import android.widget.Toast
 
 import com.onedelay.calendardiary.R
 import com.onedelay.calendardiary.fragment.CalendarFragment
+import com.onedelay.calendardiary.fragment.TimelineFragment
+import com.onedelay.calendardiary.fragment.dummy.DummyContent
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_main.view.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), TimelineFragment.OnListFragmentInteractionListener {
 
     /**
      * The [android.support.v4.view.PagerAdapter] that will provide
@@ -84,14 +86,21 @@ class MainActivity : AppCompatActivity() {
 
         override fun getItem(position: Int): Fragment {
             // getItem is called to instantiate the fragment for the given page.
-            // Return a CalendarFragment (defined as a static inner class below).
-            return CalendarFragment.newInstance(position + 1)
+
+            return when (position) {
+                0 -> CalendarFragment.newInstance(position + 1)
+                else -> TimelineFragment.newInstance(position + 2)
+            }
         }
 
         override fun getCount(): Int {
             // Show 3 total pages.
             return 2
         }
+    }
+
+    override fun onListFragmentInteraction(item: DummyContent.DummyItem?) {
+        Toast.makeText(baseContext, "아이템 클릭",Toast.LENGTH_SHORT).show()
     }
 }
 
