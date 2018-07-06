@@ -5,4 +5,10 @@
     <string name="str_tmp_date">2018/07/06</string>
     <string name="str_date_select">날짜선택</string>
     <string name="str_write_complete">작성완료</string>
+    <string name="str_time">작성시간</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="tab_text_1">Calendar</string>
+    <string name="tab_text_2">Timeline</string>
 </resources>
