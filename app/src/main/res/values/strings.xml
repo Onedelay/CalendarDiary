@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CalendarDiary</string>
+    <string name="str_select">카테고리선택</string>
+    <string name="str_date">날짜</string>
+    <string name="str_tmp_date">2018/07/06</string>
+    <string name="str_date_select">날짜선택</string>
+    <string name="str_write_complete">작성완료</string>
+</resources>
