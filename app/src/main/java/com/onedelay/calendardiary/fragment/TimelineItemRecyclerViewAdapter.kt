@@ -56,8 +56,10 @@ class TimelineItemRecyclerViewAdapter(
     override fun getItemCount(): Int = mValues.size
 
     inner class ViewHolder(val mView: View) : RecyclerView.ViewHolder(mView) {
-        val mIdView: ImageView = mView.image
-        val mContentView: TextView = mView.title
+        val mDate: TextView = mView.findViewById(R.id.date)
+        val mDayWeek: TextView = mView.findViewById(R.id.day_week)
+        val mIdView: ImageView = mView.findViewById(R.id.sticker)
+        val mContentView: TextView = mView.findViewById(R.id.content)
 
         override fun toString(): String {
             return super.toString() + " '" + mContentView.text + "'"

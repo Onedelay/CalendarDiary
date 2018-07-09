@@ -36,7 +36,7 @@ object DummyContent {
     }
 
     private fun createDummyItem(position: Int): DummyItem {
-        return DummyItem(position.toString(), "Item " + position, makeDetails(position))
+        return DummyItem(position.toString(), "오늘의 일기\n대박재미있었다!", makeDetails(position))
     }
 
     private fun makeDetails(position: Int): String {

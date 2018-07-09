@@ -55,13 +55,16 @@
         app:layout_constraintBottom_toBottomOf="@id/textDate"/>
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@drawable/textarea_border"
         app:layout_constraintTop_toBottomOf="@id/textDate"
         app:layout_constraintBottom_toTopOf="@+id/writeButton"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:hint="@string/guide_content"
+        android:gravity="start"/>
 
     <Button
         android:id="@+id/writeButton"

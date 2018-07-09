@@ -11,4 +11,6 @@
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="tab_text_1">Calendar</string>
     <string name="tab_text_2">Timeline</string>
+    <string name="guide_content">내용을 입력하세요</string>
+    <string name="text_sample">오늘의 일기</string>
 </resources>

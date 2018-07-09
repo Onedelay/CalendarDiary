@@ -1,5 +1,6 @@
 package com.onedelay.calendardiary.activity
 
+import android.content.Intent
 import android.support.design.widget.TabLayout
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
@@ -18,12 +19,13 @@ import android.widget.Toast
 
 import com.onedelay.calendardiary.R
 import com.onedelay.calendardiary.fragment.CalendarFragment
+import com.onedelay.calendardiary.fragment.DayListFragment
 import com.onedelay.calendardiary.fragment.TimelineFragment
 import com.onedelay.calendardiary.fragment.dummy.DummyContent
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_main.view.*
 
-class MainActivity : AppCompatActivity(), TimelineFragment.OnListFragmentInteractionListener {
+class MainActivity : AppCompatActivity(), TimelineFragment.OnListFragmentInteractionListener, CalendarFragment.OnDayClickListener {
 
     /**
      * The [android.support.v4.view.PagerAdapter] that will provide
@@ -94,13 +96,18 @@ class MainActivity : AppCompatActivity(), TimelineFragment.OnListFragmentInterac
         }
 
         override fun getCount(): Int {
-            // Show 3 total pages.
             return 2
         }
     }
 
     override fun onListFragmentInteraction(item: DummyContent.DummyItem?) {
         Toast.makeText(baseContext, "아이템 클릭",Toast.LENGTH_SHORT).show()
+        startActivity(Intent(this, ContentActivity::class.java))
+    }
+
+    override fun onDayClickListener(year: Int, month: Int, dayOfMonth: Int) {
+        val dayFragment = DayListFragment()
+        dayFragment.show(supportFragmentManager, "dialog")
     }
 }
 
