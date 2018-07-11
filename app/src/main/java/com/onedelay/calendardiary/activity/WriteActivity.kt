@@ -7,10 +7,10 @@ import android.os.Bundle
 import android.view.View
 import android.widget.*
 import com.onedelay.calendardiary.R
-import com.onedelay.calendardiary.fragment.model.WriteItem
+import com.onedelay.calendardiary.fragment.model.TimelineItem
 
 class WriteActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
-    var item = WriteItem()
+    var item = TimelineItem()
     lateinit var spinner: Spinner
 
     override fun onCreate(savedInstanceState: Bundle?) {
