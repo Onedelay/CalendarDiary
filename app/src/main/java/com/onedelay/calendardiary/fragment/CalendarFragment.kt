@@ -23,8 +23,8 @@ class CalendarFragment : android.support.v4.app.Fragment() {
         val rootView = inflater.inflate(R.layout.fragment_main, container, false)
 
         rootView.calendarView.setOnDateChangeListener({ calendarView, year, month, dayOfMonth ->
-            //startActivityForResult(Intent(context, WriteActivity::class.java), 100)
-            listener.onDayClickListener(year, month, dayOfMonth)
+            startActivityForResult(Intent(context, WriteActivity::class.java), 100)
+            //listener.onDayClickListener(year, month, dayOfMonth)
         })
         return rootView
     }
